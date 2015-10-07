@@ -41,7 +41,7 @@ Aizu Online Judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 提出例
 
     $ AOJ_ID="your id"
-    $ AOJ_PASS="your pass"  # パスワードを平文で利用することはセキュリティ上の問題があります
+    $ AOJ_PASS="your pass"
     $ AOJ_SRC=`cat A0000.java | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
     $ AOJ_LANG=`echo JAVA | perl -MURI::Escape -lne 'print uri_escape($_)'`
     $ AOJ_PROB="0000"

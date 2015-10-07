@@ -22,7 +22,7 @@ Aizu Online Judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 
 コーディング
 
-    $ cp T.java AOJ0000.java
+    $ cp T.java A0000.java
     $ emacs A0000.java  # edit
     $ diff A0000.java T.java
     6,8d5
@@ -32,7 +32,7 @@ Aizu Online Judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 
 テスト
 
-    $ javac Main.java
+    $ javac A0000.java
     $ java Main
     1x1=1
     ...

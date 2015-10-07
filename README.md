@@ -23,9 +23,12 @@ Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 コーディング
 
     $ cp T.java AOJ0000.java
-    $ emacs AOJ0000.java
-     # edit 
+    $ emacs AOJ0000.java  # edit
     $ diff AOJ0000.java T.java
+    6,8d5
+    <     for (int i : to(1,9))
+    <       for (int j : to(1,9))
+    <         printf("%dx%d=%d\n", i, j, i*j);
 
 テスト
 
@@ -39,8 +42,8 @@ Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 
     $ AOJ_ID="your id"
     $ AOJ_PASS="your pass"  # パスワードを平文で利用することはセキュリティ上の問題があるためお勧めできません
-    $ AOJ_SRC=`cat A0000.cpp | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
-    $ AOJ_LANG=`echo C++ | perl -MURI::Escape -lne 'print uri_escape($_)'`
+    $ AOJ_SRC=`cat A0000.java | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
+    $ AOJ_LANG=`echo JAVA | perl -MURI::Escape -lne 'print uri_escape($_)'`
     $ AOJ_PROB="0000"
     $ wget -O - --save-cookies=cookie.txt --post-data="loginUserID=${AOJ_ID}&loginPassword=${AOJ_PASS}&submit=Sign+in" --keep-session-cookies http://judge.u-aizu.ac.jp/onlinejudge/status.jsp
     $ wget -O - --load-cookies=cookie.txt --post-data="userID=${AOJ_ID}&password=${AOJ_PASS}&problemNO=${AOJ_PROB}&lessonID=&language=${AOJ_LANG}&sourceCode=${AOJ_SRC}" http://judge.u-aizu.ac.jp/onlinejudge/webservice/submit

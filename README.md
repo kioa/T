@@ -6,8 +6,8 @@ T.java
 Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforcesでも使える。
 
 ## 特徴
-* クラス名の名前変更が不要
-* よく使う標準出力は短く書ける (println, print, printf)
+* クラスの名前変更が不要
+* 標準出力を短く書ける (println, print, printf)
 * Scannerを使った標準入力を短く書ける
 * until, toでループを短く書ける (実行時間やメモリ制約のゆるい問題での利用を想定)
 
@@ -23,8 +23,8 @@ Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 コーディング
 
     $ cp T.java AOJ0000.java
-    $ emacs AOJ0000.java  # edit
-    $ diff AOJ0000.java T.java
+    $ emacs A0000.java  # edit
+    $ diff A0000.java T.java
     6,8d5
     <     for (int i : to(1,9))
     <       for (int j : to(1,9))
@@ -41,7 +41,7 @@ Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 提出例
 
     $ AOJ_ID="your id"
-    $ AOJ_PASS="your pass"  # パスワードを平文で利用することはセキュリティ上の問題があるためお勧めできません
+    $ AOJ_PASS="your pass"  # パスワードを平文で利用することはセキュリティ上の問題です
     $ AOJ_SRC=`cat A0000.java | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
     $ AOJ_LANG=`echo JAVA | perl -MURI::Escape -lne 'print uri_escape($_)'`
     $ AOJ_PROB="0000"

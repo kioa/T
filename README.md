@@ -14,7 +14,7 @@ Aizu Online judge (AOJ)での利用を想定。たぶんAtCoderとかCodeforces�
 ## 依存
 * jdk1.5.0以上
 
-## AOJでの使用例
+## AOJの問題0000での使用例
 
 準備
 

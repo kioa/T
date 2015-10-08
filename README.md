@@ -4,7 +4,6 @@ T.java
 ## 何か
 プロコンで使うことを想定したJava用テンプレート。
 Aizu Online Judge (AOJ)での利用を想定。
-たぶんAtCoderとかCodeforcesでも使える。
 
 ## 特徴
 * クラスの名前変更が不要

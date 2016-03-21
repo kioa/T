@@ -13,7 +13,9 @@ class Lib {
   void printf(String f, Object...o) { out.printf(f, o); }
   Scanner sc = new Scanner(in);
   int _Int() { return sc.nextInt(); }
+  long _Long() { return sc.nextLong(); }
   String _Next() { return sc.next(); }
+  String _Char() { return sc.next().charaAt(0); }
   String _Line() { return sc.nextLine(); }
   boolean _HasInt() { return sc.hasNextInt(); }
   boolean _HasNext() { return sc.hasNext(); }

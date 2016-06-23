@@ -15,7 +15,7 @@ class Lib {
   int _Int() { return sc.nextInt(); }
   long _Long() { return sc.nextLong(); }
   String _Next() { return sc.next(); }
-  String _Char() { return sc.next().charaAt(0); }
+  char _Char() { return sc.next().charAt(0); }
   String _Line() { return sc.nextLine(); }
   boolean _HasInt() { return sc.hasNextInt(); }
   boolean _HasNext() { return sc.hasNext(); }

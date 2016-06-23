@@ -87,11 +87,11 @@ T.javaでは、
 
 JavaにはC++のようなマクロ展開できるプリプロセッサがありません。repは書けません。
 
-  for (int i=0; i<n; i++);
+    for (int i=0; i<n; i++);
 
 T.javaでは、
 
-  for (int i : until(n))
+    for (int i : until(n))
 
 と書けます。実行速度や消費メモリは知りません。
 

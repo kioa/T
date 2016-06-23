@@ -3,18 +3,100 @@ T.java
 
 ## 何か
 プロコンで使うことを想定したJava用テンプレート。
-Aizu Online Judge (AOJ)での利用を想定。
+簡単な問題に短時間で、解答するのに使います。
+
 
 ## 特徴
-* クラスの名前変更が不要
+* ファイル名が自由 (ファイル名をMain.javaにしなくてよい)
 * 標準出力を短く書ける (println, print, printf)
 * Scannerを使った標準入力を短く書ける
 * until, toでループを短く書ける (実行時間やメモリ制約のゆるい問題での利用を想定)
 
+
 ## 依存
 * jdk1.5.0以上
 
-## AOJの問題0000での使用例
+
+## 使用方法
+
+コピーして
+
+    $ cp T/T.java Solve.java
+
+編集して
+
+    $ emacs Solve.java
+
+コンパイルして
+
+    $ javac Solve.java
+
+実行できます
+
+    $ java Main
+
+
+## ファイル名が自由
+
+    public class Main
+
+と書いて、Main.javaとして保存しなければならないと思い込んでいませんか？
+
+T.javaでは、
+
+    class Main
+
+としているので、好きなファイル名を付けることができます。
+
+なので、ソースコードは個別のファイル名で管理して、実行は"java Main"で統一できます。
+
+    $ javac A0000.java
+    $ java Main
+    $ javac A0001.java
+    $ java Main
+
+
+## 標準出力を短く書ける
+
+標準出力をタイプするのは手間です。どれだけ訓練しても手間です。
+
+    System.out.println("hoge");
+
+T.javaでは、
+
+    println("hoge");
+
+と書けます。
+
+
+## 標準入力を短く書ける
+
+標準入力のタイプも手間です。どれだけ訓練しても手間です。
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+
+T.javaでは、
+
+    int n  = _Int();
+
+と書けます。
+
+
+## until
+
+JavaにはC++のようなマクロ展開できるプリプロセッサがありません。repは書けません。
+
+  for (int i=0; i<n; i++);
+
+T.javaでは、
+
+  for (int i : until(n))
+
+と書けます。実行速度や消費メモリは知りません。
+
+
+## おまけ: AOJの問題0000での使用例
 
 準備
 
@@ -49,10 +131,12 @@ Aizu Online Judge (AOJ)での利用を想定。
     $ wget -O - --load-cookies=cookie.txt --post-data="userID=${AOJ_ID}&password=${AOJ_PASS}&problemNO=${AOJ_PROB}&lessonID=&language=${AOJ_LANG}&sourceCode=${AOJ_SRC}" http://judge.u-aizu.ac.jp/onlinejudge/webservice/submit
     $ wget -O - "http://judge.u-aizu.ac.jp/onlinejudge/webservice/status_log?user_id=${AOJ_ID}" | less
 
+
 ## エイリアス
 
     $ alias jj='javac'
     $ alias j='java'
     $ alias jr='j Main'
 
-とかすると気持ちが良い。
+とかしておくと、快適です。
+

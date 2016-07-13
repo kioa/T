@@ -22,5 +22,5 @@ class Lib {
   boolean _HasLine() { return sc.hasNextLine(); }
   int[] until(int n) { int[] t = new int[n]; for (int i=0; i<n; i++) t[i] = i; return t; }
   int[] until(int fr, int to) { int[] t = new int[to-fr]; for (int i=fr; i<to; i++) t[i-fr] = i; return t; }
-  int[] to(int fr, int to) { return until(fr, to+1); } int[] to(int n) { return until(0, n); }
+  int[] to(int fr, int to) { return until(fr, to+1); } int[] to(int n) { return until(0, n+1); }
 }

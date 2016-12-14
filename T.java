@@ -4,9 +4,9 @@ import static java.lang.Math.*; import static java.lang.System.*;
 class Main extends Lib {
   void solve() {
   }
-  public static void main(String[] args) { new Main().solve(); }
 }
 class Lib {
+  public static void main(String[] args) { new Main().solve(); }
   void println(Object o) { out.println(o); }
   void ln() { out.println(); }
   void print(Object o) { out.print(o); }
@@ -20,7 +20,7 @@ class Lib {
   boolean _HasInt() { return sc.hasNextInt(); }
   boolean _HasNext() { return sc.hasNext(); }
   boolean _HasLine() { return sc.hasNextLine(); }
-  int[] until(int n) { int[] t = new int[n]; for (int i=0; i<n; i++) t[i] = i; return t; }
   int[] until(int fr, int to) { int[] t = new int[to-fr]; for (int i=fr; i<to; i++) t[i-fr] = i; return t; }
+  int[] until(int n) { return until(0, n); }
   int[] to(int fr, int to) { return until(fr, to+1); } int[] to(int n) { return until(0, n+1); }
 }

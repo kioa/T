@@ -50,9 +50,9 @@ T.javaでは、
 
 なので、ソースコードは個別のファイル名で管理して、実行は"java Main"で統一できます。
 
-    $ javac A0000.java
+    $ javac 0000.java
     $ java Main
-    $ javac A0001.java
+    $ javac 0000.java
     $ java Main
 
 
@@ -93,7 +93,7 @@ T.javaでは、
 
     for (int i : until(n))
 
-と書けます。実行速度や消費メモリは知りません。
+と書けます。実行速度や消費メモリを犠牲にします。(定数倍のオーバーヘッドですが、制約のきつい問題では致命的な影響があることがあります)
 
 
 ## おまけ: AOJの問題0000での使用例
@@ -105,8 +105,8 @@ T.javaでは、
 コーディング
 
     $ cp T.java A0000.java
-    $ emacs A0000.java  # edit
-    $ diff A0000.java T.java
+    $ emacs 0000.java  # edit
+    $ diff 0000.java T.java
     6,8d5
     <     for (int i : to(1,9))
     <       for (int j : to(1,9))
@@ -114,7 +114,7 @@ T.javaでは、
 
 テスト
 
-    $ javac A0000.java
+    $ javac 0000.java
     $ java Main
     1x1=1
     ...
@@ -124,7 +124,7 @@ T.javaでは、
 
     $ AOJ_ID="your id"
     $ AOJ_PASS="your pass"
-    $ AOJ_SRC=`cat A0000.java | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
+    $ AOJ_SRC=`cat 0000.java | perl -MURI::Escape -lne 'print uri_escape($_)' | sed "s/%20/+/g" | sed "s/%28/(/g" | sed "s/%29/)/g" | sed "s/%2A/*/g" | sed ':loop; N; $!b loop; ;s/\n/%0A/g'`
     $ AOJ_LANG=`echo JAVA | perl -MURI::Escape -lne 'print uri_escape($_)'`
     $ AOJ_PROB="0000"
     $ wget -O - --save-cookies=cookie.txt --post-data="loginUserID=${AOJ_ID}&loginPassword=${AOJ_PASS}&submit=Sign+in" --keep-session-cookies http://judge.u-aizu.ac.jp/onlinejudge/status.jsp
@@ -139,4 +139,3 @@ T.javaでは、
     $ alias jr='j Main'
 
 とかしておくと、快適です。
-
